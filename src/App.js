@@ -9,18 +9,21 @@ import WrittenL from './components/writtenOverFooterL';
 import BelowBannerL from './components/belowbannerL';
 import FeturedBrandSection from './components/FeaturedBrandSection';
 import WhatCustomerSay from './components/whatCustomerSay';
+import NavbarB from './components/Navbar2';
+
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
-     <Banner/>
-     <BelowBannerL/>
-    {/* <Allroutes/> */}
-    <FeturedBrandSection/>
+      <NavbarB/>
+     {/* <Banner/>
+     <BelowBannerL/> */}
+    <Allroutes/>
+    {/* <FeturedBrandSection/>
     <WhatCustomerSay/>
     <AppStoreBox/> 
-    <WrittenL/>
+    <WrittenL/> */}
     <Footer/>
     </div>
   );
