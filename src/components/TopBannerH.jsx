@@ -38,7 +38,7 @@ const bannerImg =
 
     return(
        <>
-        <Box mx="21rem">
+        <Box p="5rem">
           <Image src={bannerImg[image]} alt="bannerimg" />
         </Box>
         </>
