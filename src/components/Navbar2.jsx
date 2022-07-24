@@ -1,5 +1,8 @@
 import {Box,Flex,Spacer,Link} from "@chakra-ui/react"
 import { Link as link } from "react-router-dom"
+import OfferIcon from "../icons/OfferIcon";
+import AvtarIcon from "../icons/AvtarIcon";
+import CartIcon from "../icons/CartIcon";
 
 const stl ={
     lineHeight:"21px",
@@ -22,6 +25,18 @@ function NavbarB(){
                 <Link>Lab Tests</Link>
                  <Link>RTPCR</Link>
                  <Spacer/>
+                 <Link>
+                 <OfferIcon/>
+                 Offers
+                 </Link>
+                 <Link>
+                 <AvtarIcon/>
+                 Login/Signup
+                 </Link>
+                 <Link>
+                 <CartIcon/>
+                 Cart
+                 </Link>
             </Flex>
 
         

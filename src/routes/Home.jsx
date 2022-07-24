@@ -3,7 +3,8 @@ import BelowBannerL from "../components/belowbannerL"
 import FeturedBrandSection from "../components/FeaturedBrandSection"
 import WhatCustomerSay from "../components/whatCustomerSay"
 import AppStoreBox from "../components/appStoreBoxL"
-import WrittenL from "../components/writtenOverFooterL"
+import WrittenL from "../components/writtenOverFooterL";
+import WhyChooseUs from "../components/WhyChooseUs"
 
 function Home(){
  return(
@@ -11,6 +12,7 @@ function Home(){
     <Banner/>
     <BelowBannerL/>
     <FeturedBrandSection/>
+    <WhyChooseUs/>
     <WhatCustomerSay/>
     <AppStoreBox/>
     <WrittenL/>
