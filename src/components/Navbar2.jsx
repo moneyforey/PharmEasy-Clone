@@ -3,6 +3,7 @@ import { Link as link } from "react-router-dom"
 import OfferIcon from "../icons/OfferIcon";
 import AvtarIcon from "../icons/AvtarIcon";
 import CartIcon from "../icons/CartIcon";
+import LogIn from "./Login";
 
 const stl ={
     lineHeight:"21px",
@@ -29,11 +30,16 @@ function NavbarB(){
                  <OfferIcon/>
                  Offers
                  </Link>
-                 <Link>
+                 <Link >
+                 <Flex style={{alignItem:"center",
+                alignContent:"center",
+                textAlign:"center"}}>
                  <AvtarIcon/>
-                 Login/Signup
+                 <LogIn/>
+                 </Flex>
+                 
                  </Link>
-                 <Link>
+                 <Link as={link} to="/cart">
                  <CartIcon/>
                  Cart
                  </Link>

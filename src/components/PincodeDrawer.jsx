@@ -7,10 +7,19 @@ import {
     DrawerContent,
     DrawerCloseButton,
     Button,
-    Input
+    Input,
+    useDisclosure,
+    Text,
+    Flex,
+    Box,
+    Image,
+    Link,
+    VStack
   } from '@chakra-ui/react';
+
+  import {TriangleDownIcon} from "@chakra-ui/icons";
   
-  import React,{useDisclosure} from"react"
+  import React from"react";
 
 function PincodeDrawer() {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -18,9 +27,10 @@ function PincodeDrawer() {
   
     return (
       <>
-        <Button ref={btnRef} colorScheme='teal' onClick={onOpen}>
-          Open
-        </Button>
+        <Text ref={btnRef} colorScheme='teal' onClick={onOpen}>
+          Select Pincode
+          <TriangleDownIcon color="gray"/>
+        </Text>
         <Drawer
           isOpen={isOpen}
           placement='right'
@@ -30,18 +40,35 @@ function PincodeDrawer() {
           <DrawerOverlay />
           <DrawerContent>
             <DrawerCloseButton />
-            <DrawerHeader>Create your account</DrawerHeader>
+            <DrawerHeader>Choose Your Location</DrawerHeader>
   
             <DrawerBody>
-              <Input placeholder='Type here...' />
+              <Flex>
+              <Input placeholder='Enter Pin Code' />
+               <Button color="white" bg="#10847e">Check</Button> 
+              </Flex>
+              <Flex bg="#f3f6fa" p=".5rem" gap="1rem" my="2rem">
+               <Image src="https://assets.pharmeasy.in/web-assets/dist/90ee736b.svg"/>
+               <Text>Serving more than 1,000 towns and cities in India.</Text>
+              </Flex>
+
+
+              <Flex bg="#f3f6fa" p=".5rem" gap="1rem" my="2rem">
+               <Image src="https://assets.pharmeasy.in/web-assets/dist/0c22e009.svg?dim=0x32&dpr=1.5&q=100"/>
+               <VStack style={
+                {
+                  textAlign:"left"
+                }
+               }>
+
+               <Text>Over 30,00,000 orders safely delivered</Text>
+               <Link color="skyblue">Know more</Link>
+               </VStack>
+               
+              </Flex>
             </DrawerBody>
   
-            <DrawerFooter>
-              <Button variant='outline' mr={3} onClick={onClose}>
-                Cancel
-              </Button>
-              <Button colorScheme='blue'>Save</Button>
-            </DrawerFooter>
+            
           </DrawerContent>
         </Drawer>
       </>

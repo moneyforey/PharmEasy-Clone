@@ -1,4 +1,8 @@
 import { Box , Flex, Heading,Image, Spacer} from "@chakra-ui/react"
+import InstaIcon from "../icons/InstaIcon"
+import FBIcon from "../icons/FbIcon"
+import YouIcon from "../icons/YoutIcon"
+import TwiIcon from "../icons/TwitIcon"
 const hdStl={
     textAlign:"left",
     fontSize:"16px",
@@ -81,8 +85,11 @@ const Footer =()=> {
               </Box>
               <Box pr="2rem">
               <Heading style={hdStl} as="h2" size="md">FOLLOW US</Heading> 
-              <Flex>
-
+              <Flex my="2rem" gap="1rem">
+               <InstaIcon/>
+               <FBIcon/>
+               <YouIcon/>
+               <TwiIcon/>
               </Flex>
               </Box>
             </Flex>

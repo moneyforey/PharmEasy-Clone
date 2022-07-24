@@ -125,6 +125,10 @@ const gdIstl ={
     borderRadius: ".5rem",
     
 }
+const hstl={
+    border: "1px solid green",
+    borderRadius: ".5rem",
+}
 
 function MainContH(){
 
@@ -147,7 +151,11 @@ function MainContH(){
 
          {
             data.map((elem)=>(
-              <GridItem p="2rem" style={gdIstl} >
+              <GridItem
+               _hover={{boxShadow: "rgba(3, 102, 214, 0.3) 0px 0px 0px 3px, fontWeight", 
+                cursor:"pointer"}} 
+                p="2rem" 
+                style={gdIstl} >
                  <Flex gap="2rem">
                 <Image height="50px" src={elem.image}/>
                 <Text style={nmstl}>{elem.name}</Text>

@@ -30,7 +30,7 @@ const Navbar =()=>{
         </Box>
         <Spacer />
         <InputGroup borderRadius="1rem"  size='sm'>
-        <InputLeftAddon height="50px" children={<Button size="100%">Select Pincode</Button>} />
+        <InputLeftAddon height="50px" children={<PincodeDrawer/>} />
        <Input width="70%" bg="#ffffff" height="50px" placeholder='Search Medicines/Healthcare Products' />
        <InputRightAddon height="50px" children={<IconButton size="100%" aria-label='Search database' icon={<Search2Icon />} />} />
       </InputGroup>
